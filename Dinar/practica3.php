@@ -1,36 +1,36 @@
 <?php 
-    if (isset($_GET['u_id'])) {
-        $u_id = $_GET['u_id'];
+    if (isset($_POST['u_id'])) {
+        $u_id = $_POST['u_id'];
     } else {
         $u_id  = null;
     }
-    if (isset($_GET['u_rol'])) {
-        $u_rol = $_GET['u_rol'];
+    if (isset($_POST['u_rol'])) {
+        $u_rol = $_POST['u_rol'];
     } else {
         $u_rol  = null;
     }
-    if (isset($_GET['u_name'])) {
-        $u_name = strval($_GET['u_name']);
+    if (isset($_POST['u_name'])) {
+        $u_name = strval($_POST['u_name']);
     } else {
         $u_name  = null;
     }
-    if (isset($_GET['u_surname'])) {
-        $u_surname = strval($_GET['u_surname']);
+    if (isset($_POST['u_surname'])) {
+        $u_surname = strval($_POST['u_surname']);
     } else {
         $u_surname  = null;
     }
-    if (isset($_GET['u_password'])) {
-        $u_password = strval($_GET['u_password']);
+    if (isset($_POST['u_password'])) {
+        $u_password = strval($_POST['u_password']);
     } else {
         $u_password  = null;
     }
-    if (isset($_GET['u_email'])) {
-        $u_email = strval($_GET['u_email']);
+    if (isset($_POST['u_email'])) {
+        $u_email = strval($_POST['u_email']);
     } else {
         $u_email  = null;
     }
-    if (isset($_GET['u_active'])) {
-        $u_active = $_GET['u_active'];
+    if (isset($_POST['u_active'])) {
+        $u_active = $_POST['u_active'];
     } else {
         $u_active  = null;
     }
