@@ -1,4 +1,12 @@
 # M07_login
+- Aquesta pràctica consisteix en fer un formulari php i fer que es connecti amb una base de dades Un cop introdueixes les seguents dades 
+    -id
+    -rol
+    -name
+    -surname
+    -password
+    -email
+    -active
 ## Practica 4
 En el exercici de la practica quatre haurem de tenir un arbre semblant a aquest.<br />
 crear_usuari<br />
