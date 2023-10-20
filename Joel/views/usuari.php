@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         echo "<br>Contraseña: " . $loginPassword;
     } else {
         echo "Inicio de sesión fallido. Por favor, verifica tus credenciales.";
-    }
+    /}
 }
 ?>
 
