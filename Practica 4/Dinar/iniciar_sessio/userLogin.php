@@ -10,14 +10,17 @@ if (isset($_POST['send'])){
     $consulta = "SELECT PASSWORD from user where email = '$email';";
     $result = mysqli_query($conn, $consulta);
     $fila = mysqli_fetch_assoc($result);
-    //Ho guardo en una variable mes comoda per mi.
-    $password = $fila['PASSWORD'];
     //Mirem si les contrasenyes son iguals
-    if ($password == $passwd) {
-        //Enviem la informacio a ../views/usuari.php amb la etiqueta email y la variable email per url
-        header('Location: ../views/usuari.php?email=' . $email);
+    if($fila) {
+        if ($fila['PASSWORD'] == $passwd) {
+            //Enviem la informacio a ../views/usuari.php amb la etiqueta email y la variable email per url
+            header('Location: ../views/usuari.php?email=' . $email);
+        } else {
+            //Sino mostrem que el login es incorrecte
+            include('../views/login.html');
+            echo "Login incorrecte";
+        }
     } else {
-        //Sino mostrem que el login es incorrecte
         include('../views/login.html');
         echo "Login incorrecte";
     }
