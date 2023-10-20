@@ -38,13 +38,12 @@ $active = isset($_POST['active']) ? 1 : 0;
 $sql = "INSERT INTO user (id, rol, name, surname, password, email, active)
 VALUES ('$id', '$rol', '$name', '$surname', '$password', '$email', '$active')";
 
-if ($conn->query($sql) === TRUE) {
-  header("location:.. /views/login.html")
-  echo "Datos guardados correctamente.";
-} else {
-  echo "Error al guardar los datos: " . $conn->error;
+$resultat = mysqli_query($connection, $sql);
+
+if(!$resultat) {
+  die("No s'ha pogut introduir la consulta");
 }
 
-$conn->close();
+header("Location: ../views/login.html")
 ?>
 
