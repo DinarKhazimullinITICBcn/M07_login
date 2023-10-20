@@ -1,11 +1,5 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "admin";
-$dbname = "Usuarios";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
+include("../db_connection.php");
 if ($conn->connect_error) {
   die("Conexión fallida: " . $conn->connect_error);
 }
@@ -45,6 +39,7 @@ $sql = "INSERT INTO user (id, rol, name, surname, password, email, active)
 VALUES ('$id', '$rol', '$name', '$surname', '$password', '$email', '$active')";
 
 if ($conn->query($sql) === TRUE) {
+  header("location:.. /views/login.html")
   echo "Datos guardados correctamente.";
 } else {
   echo "Error al guardar los datos: " . $conn->error;
