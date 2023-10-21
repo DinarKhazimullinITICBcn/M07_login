@@ -1,29 +1,32 @@
-
 <?php
-include('db_connection.php');
+include('../db_connection.php');
 
-if (isset($_GET['email'])) {
-    $email = $_GET['email'];
-    $consulta = "SELECT * FROM user WHERE email = '$email'";
-    $resultado = mysqli_query($connection, $consulta);
+$email = $_GET['email'];
 
-    if ($resultado) {
-        if (mysqli_num_rows($resultado) > 0) {
-            $row = mysqli_fetch_assoc($resultado);
+$consulta = "SELECT * FROM user WHERE email = '$email'";
 
-            echo "Soy un " . $row["rol"] . "<br>";
-            echo "Nombre: " . $row["name"] . "<br>";
-            echo "Apellido: " . $row["surname"] . "<br>";
-            echo "Email: " . $row["email"] . "<br>";
-        } else {
-            echo "No se encontró ningún usuario con el email proporcionado.";
-        }
-    } else {
-        echo "Error en la consulta: " . mysqli_error($connection);
-    }
+ini_set('display_errors',1);
+ini_set('display_startup_errors',1);
+error_reporting(E_ALL);
+$resultado = mysqli_query($connection, $consulta);
+
+$row = mysqli_fetch_assoc($resultado);
+if($row["rol"]=="alumnat") {
+
+  echo "Soc un alumne" . "<br>";
+  echo "Nom: " . $row["name"] . "<br>";
+  echo "Cognom: " . $row["surname"] . "<br>";
+  echo "Email: " . $row["email"] . "<br>";
 } else {
-    echo "No se proporcionó un email válido.";
+  echo "Hola " . $row["name"] . ", ets professor!!" ."<br>" . "<br>";
+  echo "La llista d'usuaris de la base de dades és:" . "<br>";
+  $consultaProfe = "SELECT * FROM user;";
+  $resultado2 = mysqli_query($connection,$consultaProfe);
+  while($row2 = mysqli_fetch_assoc($resultado2)){
+    echo "<p>nom i cognom: " . $row2["name"] . $row2["surname"] . "</p>";
+  }
 }
-echo "nada";
+mysqli_close($connection);
 ?>
+
 
