@@ -20,6 +20,8 @@ if (isset($_POST['id'], $_POST['rol'], $_POST['name'], $_POST['surname'], $_POST
   $sql = "INSERT INTO user (id, rol, name, surname, password, email, active)
           VALUES ('$id', '$rol', '$name', '$surname', '$password', '$email', '$active');";
 
+  var_dump($sql);
+
   if ($connection->query($sql) === TRUE) {
     echo "Datos guardados correctamente.";
 
