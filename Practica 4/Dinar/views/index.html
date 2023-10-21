@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica 3</title>
+</head>
+<body>
+    <h1>Crear usuari</h1>
+    <!--Cream el formulari que manda la informacio a ../crear_usuari/index.php amb el metode POST-->
+    <form action="../crear_usuari/index.php" method="POST">
+        <label>ID</label>
+        <input type="text" name="id">
+        <br>
+        <label>NAME</label>
+        <input type="text" name="name">
+        <br>
+        <label>SURNAME</label>
+        <input type="text" name="surname">
+        <br>
+        <label>
+            <select name="ROL">
+                <option value="Professorat">Professorat</option>
+                <option value="Alumnat">Alumnat</option>
+            </select>
+        </label>
+        <br>
+        <label>Password</label>
+        <input type="text" name="passwd">
+        <br>
+        <label>email</label>
+        <input type="text" name="email">
+        <br>
+        <label for="active">Active</label>
+        <input type="checkbox" name="active">
+        <br>
+        <button type="submit" name="send">SEND</button>
+    </form>
+    <!--Creem un enllac que envi a la pagina de login-->
+    <a href="login.html">Iniciar sessio usuario</a>    
+</body>
+</html>
