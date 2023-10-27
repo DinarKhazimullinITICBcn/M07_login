@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear usuario</title>
+</head>
+<body>
+    <h1>Crear usuario</h1>
+    <!--Cream el formulari que manda la informacio a ../crear_usuari/index.php amb el metode POST-->
+    <form action="../crear_usuari/index.php" method="POST">
+        <label>ID</label>
+        <input type="text" name="id">
+        <br>
+        <label>Nombre</label>
+        <input type="text" name="name">
+        <br>
+        <label>Apellido</label>
+        <input type="text" name="surname">
+        <br>
+        <label>
+            <select name="ROL">
+                <option value="Professorat">Professor</option>
+                <option value="Alumnat">Alumno</option>
+            </select>
+        </label>
+        <br>
+        <label>Contrasenya</label>
+        <input type="text" name="passwd">
+        <br>
+        <label>Correo electronico</label>
+        <input type="text" name="email">
+        <br>
+        <label for="active">Activo</label>
+        <input type="checkbox" name="active">
+        <br>
+        <button type="submit" name="send">Enviar</button>
+    </form>
+    <!--Creem un enllac que envi a la pagina de login-->
+    <a href="login.html">Iniciar sessiom usuario</a>
+    <a href="../idioma.php">Elige idioma</a>
+    <a href="../../eliminar_cookie/eliminar_cookie.php">Eliminar cookie</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Iniciar session del usuario</h1>
+    <!--Cream el formulari que manda la informacio a ../iniciar_sessio/UserLogin.php amb el metode POST-->
+    <form action="../iniciar_sessio/userLogin.php" method="post">
+        <label>Correo electronico</label>
+        <input type="text" name="email">
+        <br>
+        <label>Contraseña</label>
+        <input type="text" name="contrasenya">
+        <br>
+        <input type="checkbox" name="active">
+        <label for="active">Acuerdate</label>
+        <br>
+        <button type="submit" name="send">Enviar</button>
+    </form>
+    <!--Creem un enllac a index.html per a registrarse-->
+    <a href="./index.html">Registrarse</a>
+    <a href="../idioma.php">Elige idioma</a>
+    <a href="../../eliminar_cookie/eliminar_cookie.php">Eliminar Cookie</a>
+</body>
+</html>
