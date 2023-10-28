@@ -4,16 +4,12 @@
     <title>Canvi d' idioma</title>
   </head>
   <body>
-    <?php
-    if($_COOKIE['idioma'] =='spanish') {
-    header('Location: spanish/index.html');
-    } else if ($_COOKIE['idioma'] =='english'){
-    header('Location: english/index.html');
-    } else if ($_COOKIE['idioma'] =='catalan'){
-    header('Location: catalan/index.html');
-    }
+  <?php
+    if (isset($_COOKIE["idioma"])) {
+        $idioma = $_COOKIE["idioma"];
+        header("Location: ../views/" . $idioma . "/index.html");
+        exit;    }
     ?>
-
     <h1>ESCULL UN IDIOMA</h1>
     <table width="25%" border="0" align="center">
       <tr>
