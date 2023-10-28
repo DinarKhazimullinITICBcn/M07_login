@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <h1>Sign up</h1>
+    <form action="../crear_usuari/index.php" method="POST">
+      <label>ID:</label>
+      <input type="number" name="id" required><br><br>
+
+      <label>Rol:</label>
+      <select name="rol" required>
+        <option value="alumnat">Student</option>
+        <option value="professorat">Teacher</option>
+      </select><br><br>
+
+      <label>Name:</label>
+      <input type="text" name="name" required><br><br>
+
+      <label>Surname:</label>
+      <input type="text" name="surname" required><br><br>
+
+      <label>Password:</label>
+      <input type="password" name="password" required><br><br>
+
+      <label>Email:</label>
+      <input type="email" name="email" required><br><br>
+
+      <label>Active:</label>
+      <input type="checkbox" name="active" value="1"><br><br>
+
+      <input type="submit" value="Save">
+    </form>
+    <a href="login.html">Log in</a><br>
+    <a href="../../deleteCookie.php">Errase the cookie</a><br>
+    <a href="../index.php">Select a language</a>
+  </body>
+</html>
+
