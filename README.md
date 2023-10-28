@@ -19,3 +19,5 @@ views<br />
 &emsp;usuari.php<br />
 db_connection.php<br />
 El objectiu es tenir una pagina de registre y login, en el que es pot anar de un al altre, y en el que podem crear un usuari y guardar-lo en una base de dades sql, y en fer login depenent del rol, poder veure el nostre nom o si som professor veure tots els members de la base de dades
+## Practica 5
+[Link al video Dinar](https://drive.google.com/file/d/1MIQsgX_Hqpft1GMKzKgvLF-J8W8euhHO/view?usp=sharing)
