@@ -8,7 +8,7 @@
 <body>
     <?php
     //Incluim el php en el body de html i incluim la connexio per als queris
-    include('../db_connection.php');
+    include('../../db_connection.php');
     //Agafem el email que habiem passat en userLogin
     $email = $_GET['email'];
     //Fem la consulta per veure si es alumnat o professor
@@ -35,5 +35,8 @@
         }
     }
     ?>
+    <a href="login.html">Iniciar sessiom usuario</a>
+    <a href="../idioma.php">Elige idioma</a>
+    <a href="../../eliminar_cookie/eliminar_cookie.php">Eliminar cookie</a>
 </body>
 </html>
