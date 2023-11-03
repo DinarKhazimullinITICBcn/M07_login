@@ -1,14 +1,18 @@
 <?php
+//Creem la sessio
 session_start();
-include('../db_connection.php');
+include('../db_connection.php');\
+//Comprovem si esta buit o no
 if (isset($_POST['email']) && isset($_POST['contrasenya'])){
     $email = $_POST['email'];
     $passwd = $_POST['contrasenya'];
+    //Fem la consulta y la executem
     $consulta = "SELECT NAME, SURNAME, PASSWORD, ROL from user where email = '$email';";
     $result = mysqli_query($conn, $consulta);
     $fila = mysqli_fetch_assoc($result);
     if($fila) {
         if ($fila['PASSWORD'] == $passwd) {
+            //Creem les diferents sessions per utilitzar
             $_SESSION['name'] = $fila['NAME'];
             $_SESSION['surname'] = $fila['SURNAME'];
             $_SESSION['email'] = $email;
