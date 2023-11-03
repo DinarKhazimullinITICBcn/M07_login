@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <h1>Iniciar sessio de l'usuario</h1>
+    <!--Cream el formulari que manda la informacio a ../iniciar_sessio/UserLogin.php amb el metode POST-->
+    <form action="../iniciar_sessio/authentificate.php" method="post">
+        <label>Email</label>
+        <input type="text" name="email">
+        <br>
+        <label>Contrasenya</label>
+        <input type="text" name="contrasenya">
+        <br>
+        <input type="checkbox" name="active">
+        <label for="active">Remember Me</label>
+        <br>
+        <button type="submit" name="send">SEND</button>
+    </form>
+</body>
+</html>
