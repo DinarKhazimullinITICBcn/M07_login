@@ -7,10 +7,11 @@
 </head>
 <body>
     <?php
+    //Iniciem la sessio
     session_start();
     include('../db_connection.php');
     if ($_SESSION['rol'] == "alumnat") {
-        //Mostrem la informacio del alumne
+        //Mostrem la informacio del alumne amb les sessions previament creades
         echo "<p>sessió iniciada</p>";
         echo "<p>soc un " . $_SESSION['rol'] . "</p>";
         echo "<p>nom: " . $_SESSION['name'] . "</p>";
@@ -18,7 +19,7 @@
         echo "<p>email: " . $_SESSION['email'] . "</p>";
 
     } else {
-        //Mostrem tota la informacio de tots en la base de dades
+        //Mostrem tota la informacio de tots en la base de dades amb les sessions previament creades
         echo "<p>sessió iniciada</p>";
         echo "<p>Hola " . $_SESSION['name'] . ", ets " . $_SESSION['rol'] . "!!</p>";
         echo "<p>La llista d'usuaris de la base de dades es: </p>";
